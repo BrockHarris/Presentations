@@ -1,0 +1,11 @@
+<div class="home_col_left">
+	<% @slides.each do |slide| %>
+		<div class="slide_select">
+			<span class="slide_number"><%= slide.position %>.</span> <%= link_to slide.title, slide %>
+		</div>
+	<% end %>
+</div>
+
+<div class="home_col_right">
+	<%= link_to (image_tag("play.png", :size => "75x75")), @first_slide, :class=> "play btn" %>
+</div>
